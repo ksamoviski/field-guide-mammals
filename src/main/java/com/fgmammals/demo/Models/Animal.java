@@ -7,12 +7,14 @@ import javax.persistence.ManyToOne;
 import java.util.Objects;
 
 @Entity
-public class Mammal {
+public class Animal {
     @Id
     @GeneratedValue
     private Long id;
+    private String order;
+    private String family;
     private String species;
-    private String type;
+    private String commonName;
     private String description;
 
     @ManyToOne
@@ -22,30 +24,42 @@ public class Mammal {
     private String didYouKnow;
     private String range;
     private String tracks;
-    private String mainMammalPicture;
+    private String mainAnimalPicture;
 
-    public Mammal(String species, String type, String description, Habitat habitat, String reproduction, String didYouKnow, String range, String tracks, String mainMammalPicture) {
+    public Animal(String  order, String family, String species, String commonName, String description, Habitat habitat, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
+        this.order = order;
+        this.family = family;
         this.species = species;
-        this.type = type;
+        this.commonName = commonName;
         this.description = description;
         this.habitat = habitat;
         this.reproduction = reproduction;
         this.didYouKnow = didYouKnow;
         this.range = range;
         this.tracks = tracks;
-        this.mainMammalPicture = mainMammalPicture;
+        this.mainAnimalPicture = mainAnimalPicture;
     }
 
     public Long getId() {
         return id;
     }
 
+
+    public String getOrder() {
+        return order;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+
     public String getSpecies() {
         return species;
     }
 
-    public String getType() {
-        return type;
+    public String getCommonName() {
+        return commonName;
     }
 
     public String getDescription() {
@@ -72,23 +86,19 @@ public class Mammal {
         return tracks;
     }
 
-    public String getMainMammalPicture() {
-        return mainMammalPicture;
+    public String getMainAnimalPicture() {
+        return mainAnimalPicture;
     }
 
-    public Mammal(String type) {
-        this.type = type;
-    }
-
-    public Mammal() {
+    public Animal() {
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Mammal mammal = (Mammal) o;
-        return id.equals(mammal.id);
+        Animal animal = (Animal) o;
+        return id.equals(animal.id);
     }
 
     @Override

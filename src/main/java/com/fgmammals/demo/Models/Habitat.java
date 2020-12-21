@@ -14,7 +14,7 @@ public class Habitat {
     private String name;
 
     @OneToMany
-    private Collection<Mammal> mammals;
+    private Collection<Animal> animals;
 
     public Long getId() {
         return id;
@@ -24,8 +24,8 @@ public class Habitat {
         return name;
     }
 
-    public Collection<Mammal> getMammals() {
-        return mammals;
+    public Collection<Animal> getAnimals() {
+        return animals;
     }
 
     public Habitat(String name) {
