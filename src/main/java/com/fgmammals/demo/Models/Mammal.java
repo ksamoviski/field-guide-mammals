@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import java.util.Objects;
 
 @Entity
-public class Mammal {
+public abstract class Mammal {
     @Id
     @GeneratedValue
     private Long id;
