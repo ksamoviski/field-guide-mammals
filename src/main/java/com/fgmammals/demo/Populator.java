@@ -22,6 +22,5 @@ public class Populator implements CommandLineRunner {
         String virginiaOpossumDidYouKnow = "The opossum “plays dead” when frightened, by essentially passing out when confronted with danger. This technique usually causes the predator to lose interest and wander off. Then the opossum wakes up a short time later and goes about its business.";
         Animal virginiaOpossum = new Animal("didelphimorphia", "DIDELPHIDAE", "DIDELPHIS VIRGINIANA", "Virginia Opossum", virginiaOpossumDescription, wetLands, virginiaOpossumReproduction,
                 virginiaOpossumDidYouKnow,"place holder for range photo","place holder for tracks image", "placeholder for main picture");
-
     }
 }
