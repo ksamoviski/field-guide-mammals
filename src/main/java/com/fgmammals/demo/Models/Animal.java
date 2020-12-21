@@ -1,9 +1,7 @@
 package com.fgmammals.demo.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -17,8 +15,8 @@ public class Animal {
     private String commonName;
     private String description;
 
-    @ManyToOne
-    private Habitat habitat;
+    @ManyToMany
+    private Collection <Habitat> habitats;
 
     private String reproduction;
     private String didYouKnow;
@@ -26,13 +24,13 @@ public class Animal {
     private String tracks;
     private String mainAnimalPicture;
 
-    public Animal(String  order, String family, String species, String commonName, String description, Habitat habitat, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
+    public Animal(String  order, String family, String species, String commonName, String description, Collection<Habitat> habitats, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
         this.order = order;
         this.family = family;
         this.species = species;
         this.commonName = commonName;
         this.description = description;
-        this.habitat = habitat;
+        this.habitats = habitats;
         this.reproduction = reproduction;
         this.didYouKnow = didYouKnow;
         this.range = range;
@@ -66,8 +64,8 @@ public class Animal {
         return description;
     }
 
-    public Habitat getHabitat() {
-        return habitat;
+    public Collection<Habitat> getHabitats() {
+        return habitats;
     }
 
     public String getReproduction() {

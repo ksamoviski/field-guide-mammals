@@ -5,7 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface AnimalRepository extends CrudRepository <Animal, Long> {
 
-    Animal findByType(String type);
+    Animal findByCommonName(String commonName);
+
+
 
 
 }
