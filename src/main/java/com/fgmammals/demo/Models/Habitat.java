@@ -1,9 +1,6 @@
 package com.fgmammals.demo.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
@@ -13,7 +10,7 @@ public class Habitat {
     private Long id;
     private String name;
 
-    @OneToMany
+    @ManyToMany
     private Collection<Mammal> mammals;
 
     public Long getId() {
