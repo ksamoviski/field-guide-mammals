@@ -9,7 +9,7 @@ public class Animal {
     @Id
     @GeneratedValue
     private Long id;
-    private String order;
+    private String speciesOrder;
     private String family;
     private String species;
     private String commonName;
@@ -38,10 +38,16 @@ public class Animal {
 //        this.mainAnimalPicture = mainAnimalPicture;
 //    }
 
-    public Animal(String commonName) {
+    public Animal(String commonName, String speciesOrder, String species, String description) {
         this.commonName = commonName;
+        this.speciesOrder = speciesOrder;
+        this.species = species;
+        this.description = description;
 
     }
+
+
+
 
 
     public Long getId() {
@@ -49,23 +55,23 @@ public class Animal {
     }
 
 
-    public String getOrder() {
-        return order;
+    public String getSpeciesOrder() {
+        return speciesOrder;
     }
-
-    public String getFamily() {
-        return family;
-    }
-
-
+//
+//    public String getFamily() {
+//        return family;
+//    }
+//
+//
     public String getSpecies() {
         return species;
     }
-
-    public String getCommonName() {
-        return commonName;
-    }
-
+//
+//    public String getCommonName() {
+//        return commonName;
+//    }
+//
     public String getDescription() {
         return description;
     }
