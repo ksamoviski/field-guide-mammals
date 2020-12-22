@@ -11,12 +11,19 @@ import javax.annotation.Resource;
 
 @Controller
 public class AnimalController {
+
+
     @Resource
     private AnimalRepository animalRepo;
 
     @RequestMapping("/animals/{commonName}")
     public String displayAnimalByCommonName(@PathVariable String commonName, Model model){
-        model.addAttribute("model",animalRepo.findByCommonName(commonName));
+        model.addAttribute("animal",animalRepo.findByCommonName(commonName));
         return "individualAnimalPageView";
+    }
+
+    @RequestMapping("/home")
+    public String displayHome() {
+        return "home";
     }
 }

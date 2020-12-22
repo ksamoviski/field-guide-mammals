@@ -9,7 +9,7 @@ public class Animal {
     @Id
     @GeneratedValue
     private Long id;
-    private String order;
+    private String speciesOrder;
     private String family;
     private String species;
     private String commonName;
@@ -24,8 +24,8 @@ public class Animal {
     private String tracks;
     private String mainAnimalPicture;
 
-    public Animal(String  order, String family, String species, String commonName, String description, Collection<Habitat> habitats, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
-        this.order = order;
+    public Animal(String speciesOrder, String family, String species, String commonName, String description, Collection<Habitat> habitats, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
+        this.speciesOrder = speciesOrder;
         this.family = family;
         this.species = species;
         this.commonName = commonName;
@@ -43,8 +43,8 @@ public class Animal {
     }
 
 
-    public String getOrder() {
-        return order;
+    public String getSpeciesOrder() {
+        return speciesOrder;
     }
 
     public String getFamily() {
