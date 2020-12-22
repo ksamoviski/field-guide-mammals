@@ -24,19 +24,6 @@ public class Animal {
     private String tracks;
     private String mainAnimalPicture;
 
-    public Animal(String speciesOrder, String family, String species, String commonName, String description, Collection<Habitat> habitats, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
-        this.speciesOrder = speciesOrder;
-        this.family = family;
-        this.species = species;
-        this.commonName = commonName;
-        this.description = description;
-        this.habitats = habitats;
-        this.reproduction = reproduction;
-        this.didYouKnow = didYouKnow;
-        this.range = range;
-        this.tracks = tracks;
-        this.mainAnimalPicture = mainAnimalPicture;
-    }
 
     public Long getId() {
         return id;
@@ -90,6 +77,29 @@ public class Animal {
 
     public Animal() {
     }
+
+    public Animal(String speciesOrder, String family, String species, String commonName, String description, Collection<Habitat> habitats, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
+        this.speciesOrder = speciesOrder;
+        this.family = family;
+        this.species = species;
+        this.commonName = commonName;
+        this.description = description;
+        this.habitats = habitats;
+        this.reproduction = reproduction;
+        this.didYouKnow = didYouKnow;
+        this.range = range;
+        this.tracks = tracks;
+        this.mainAnimalPicture = mainAnimalPicture;
+    }
+
+    public Animal(String commonName, String description) {
+        this.commonName = commonName;
+        this.description = description;
+    }
+
+
+
+
 
     @Override
     public boolean equals(Object o) {

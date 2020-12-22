@@ -25,13 +25,31 @@ public class Populator implements CommandLineRunner {
         Habitat wetLands = new Habitat("wetlands");
         ArrayList<Habitat> opossumHabitats=new ArrayList<>();
         opossumHabitats.add(wetLands);
-        String virginiaOpossumDescription = "A description";
-        String virginiaOpossumReproduction = "some reproduction";
-        String virginiaOpossumDidYouKnow = "randomFact";
-        Animal virginiaOpossum = new Animal("didelphimorphia", "DIDELPHIDAE", "DIDELPHIS VIRGINIANA", "name", virginiaOpossumDescription, opossumHabitats, virginiaOpossumReproduction,
-                virginiaOpossumDidYouKnow,"place holder for range photo","place holder for tracks image", "placeholder for main picture");
+
+        Animal virginiaOpossum = new Animal("didelphimorphia", "DIDELPHIDAE", "DIDELPHIS VIRGINIANA", "Virginia-Opossum", "/textFiles/virginiaOpossumDescription.txt", opossumHabitats, "/textFiles/VirginiaOpossumReproduce.txt",
+               "/textFiles/virginiaOpossumDYK.txt","place holder for range photo","place holder for tracks image", "placeholder for main picture");
+        Animal easternChipmunk = new Animal("Rodentia", "Sciuridae", "Tamias Striatus", "Eastern-Chipmunk", "/textFiles/EasternChipmunkDescription.txt",
+                opossumHabitats, "/textFiles/EasternChipmunkReproduce.txt", "/textFiles/EasternChipmunkDYK.txt", "range photo here", "tracks here",
+                "photo here");
+        Animal easternGraySquirrel = new Animal("Rodentia", "Sciuridae", "Sciur Us Carolinensis", "Eastern-Gray-Squirrel",
+                "/textFiles/EasternGraySquirrelDescription.txt",
+                opossumHabitats, "/textFiles/EasternGraySquirrelReproduce.txt", "/textFiles/EasternGraySquirrelDYK.txt", "range photo here", "tracks here",
+                "photo here");
+        Animal thirteenLinedSquirrel = new Animal("Rodentia", "Sciuridae", "Sper Mophilus Tridecemlineatus",
+                "Thirteen-Lined-Ground-Squirrel", "/textFiles/13LinedSquirrelDescription.txt",
+                opossumHabitats, "/textFiles/13LinedSquirrelReproduce.txt", "/textFiles/13LinedSquirrelDYK.txt", "range photo here", "tracks here",
+                "photo here");
+
+
         habitatRepo.save(wetLands);
         animalRepo.save(virginiaOpossum);
+        animalRepo.save(easternChipmunk);
+        animalRepo.save(easternGraySquirrel);
+        animalRepo.save(thirteenLinedSquirrel);
+
+
+
+
 
     }
 }

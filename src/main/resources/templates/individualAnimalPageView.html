@@ -5,6 +5,13 @@
     <title>Animal Details</title>
 </head>
 <body>
+
 <p th:text =${animal.commonName}></p>
+<iframe th:src="${animal.description}" width="500px"></iframe>
+<br>
+<iframe th:src="${animal.reproduction}" width="500px"></iframe>
+<br>
+<iframe th:src="${animal.didYouKnow}" width="500px"></iframe>
+
 </body>
 </html>
