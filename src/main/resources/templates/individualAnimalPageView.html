@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p th:text =${animal.commonName}></p>
+<p th:text =${animal.toDisplay()}></p>
 <iframe th:src="${animal.description}" width="500px"></iframe>
 <br>
 <iframe th:src="${animal.reproduction}" width="500px"></iframe>

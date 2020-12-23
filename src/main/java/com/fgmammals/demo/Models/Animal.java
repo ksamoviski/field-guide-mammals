@@ -13,13 +13,14 @@ public class Animal {
     private String family;
     private String species;
     private String commonName;
+
     private String description;
-
-    @ManyToMany
-    private Collection <Habitat> habitats;
-
     private String reproduction;
     private String didYouKnow;
+
+    @ManyToMany
+    private Collection<Habitat> habitats;
+
     private String range;
     private String tracks;
     private String mainAnimalPicture;
@@ -28,7 +29,6 @@ public class Animal {
     public Long getId() {
         return id;
     }
-
 
     public String getSpeciesOrder() {
         return speciesOrder;
@@ -51,16 +51,16 @@ public class Animal {
         return description;
     }
 
-    public Collection<Habitat> getHabitats() {
-        return habitats;
-    }
-
     public String getReproduction() {
         return reproduction;
     }
 
     public String getDidYouKnow() {
         return didYouKnow;
+    }
+
+    public Collection<Habitat> getHabitats() {
+        return habitats;
     }
 
     public String getRange() {
@@ -78,27 +78,36 @@ public class Animal {
     public Animal() {
     }
 
-    public Animal(String speciesOrder, String family, String species, String commonName, String description, Collection<Habitat> habitats, String reproduction, String didYouKnow, String range, String tracks, String mainAnimalPicture) {
+    public Animal(String commonName, String speciesOrder, String family, String species, Collection<Habitat> habitats, String range, String tracks, String mainAnimalPicture) {
+        this.commonName = commonName;
         this.speciesOrder = speciesOrder;
         this.family = family;
         this.species = species;
-        this.commonName = commonName;
-        this.description = description;
+
+        this.description = "/textFiles/" + commonName + "Description.txt";
+        this.reproduction = "/textFiles/" + commonName + "Reproduction.txt";
+        this.didYouKnow = "/textFiles/" + commonName + "DYK.txt";
+
         this.habitats = habitats;
-        this.reproduction = reproduction;
-        this.didYouKnow = didYouKnow;
         this.range = range;
         this.tracks = tracks;
         this.mainAnimalPicture = mainAnimalPicture;
     }
 
-    public Animal(String commonName, String description) {
-        this.commonName = commonName;
-        this.description = description;
+    public String toDisplay() {
+        char[] nameToCharArray = commonName.toCharArray();
+        String displayedName = "";
+        int k = 0;
+        for (int i = 1; i < nameToCharArray.length; i++) {
+            if (Character.isUpperCase(nameToCharArray[i])) {
+                displayedName += commonName.substring(k, i) + " ";
+                k = i;
+            }
+        }
+        displayedName += commonName.substring(k);
+
+        return displayedName;
     }
-
-
-
 
 
     @Override
