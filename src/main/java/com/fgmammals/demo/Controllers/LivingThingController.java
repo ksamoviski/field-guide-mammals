@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 public class LivingThingController {
 
 
+
     @Resource
     private LivingThingRepository livingThingRepo;
 
