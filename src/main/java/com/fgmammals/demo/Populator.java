@@ -1,22 +1,21 @@
 package com.fgmammals.demo;
 
 
-import com.fgmammals.demo.Models.Animal;
-import com.fgmammals.demo.Models.Description;
-import com.fgmammals.demo.Models.Habitat;
+import com.fgmammals.demo.Models.*;
 import com.fgmammals.demo.Repositories.AnimalRepository;
 import com.fgmammals.demo.Repositories.HabitatRepository;
-import javassist.runtime.Desc;
+import com.fgmammals.demo.Repositories.LivingThingRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.Collection;
 
 @Component
 public class Populator implements CommandLineRunner {
 
+    @Resource
+    private LivingThingRepository livingThingRepo;
     @Resource
     private AnimalRepository animalRepo;
     @Resource
@@ -29,39 +28,41 @@ public class Populator implements CommandLineRunner {
         opossumHabitats.add(wetLands);
 
 
-        Animal virginiaOpossum = new Animal("VirginiaOpossum", "Didelphimorphia", "Didelphimorphia", "Didelphis virginiana", opossumHabitats, "place holder for range photo", "place holder for tracks image", "placeholder for main picture");
-        Animal easternChipmunk = new Animal("EasternChipmunk", "Rodentia", "Sciuridae", "Tamias striatus",
+        Mammal virginiaOpossum = new Mammal("VirginiaOpossum", "Rodentia","Didelphimorphia", "Didelphis virginiana", opossumHabitats, "range", "image", "tracks");
+        Mammal easternChipmunk = new Mammal("EasternChipmunk", "Rodentia", "Sciuridae", "Tamias striatus",
                 opossumHabitats, "range photo here", "tracks here",
                 "photo here");
-        Animal easternGraySquirrel = new Animal("EasternGraySquirrel", "Rodentia", "Sciuridae", "Sciurus carolinensis",
+        Mammal easternGraySquirrel = new Mammal("EasternGraySquirrel", "Rodentia", "Sciuridae", "Sciurus carolinensis",
                 opossumHabitats, "range photo here", "tracks here",
                 "photo here");
-        Animal thirteenLinedSquirrel = new Animal("13LinedGroundSquirrel", "Rodentia", "Sciuridae", "Spermophilus tridecemlineatus",
+        Mammal thirteenLinedSquirrel = new Mammal("13LinedGroundSquirrel", "Rodentia", "Sciuridae", "Spermophilus tridecemlineatus",
                 opossumHabitats, "range photo here", "tracks here",
                 "photo here");
-        Animal easternFoxSquirrel = new Animal("EasternFoxSquirrel", "Rodentia", "Sciuridae", "Sciurus niger",
+        Mammal easternFoxSquirrel = new Mammal("EasternFoxSquirrel", "Rodentia", "Sciuridae", "Sciurus niger",
                 opossumHabitats, "range", "tracks", "photo");
-        Animal redSquirrel = new Animal("RedSquirrel", "Rodentia", "Sciuridae", "Tamiasciurus hudsonicus",
+        Mammal redSquirrel = new Mammal("RedSquirrel", "Rodentia", "Sciuridae", "Tamiasciurus hudsonicus",
                 opossumHabitats, "range", "tracks", "photo");
-        Animal americanBeaver = new Animal("AmericanBeaver", "Rodentia", "Castoridae", "Tamiasciurus hudsonicus",
+        Mammal americanBeaver = new Mammal("AmericanBeaver", "Rodentia", "Castoridae", "Tamiasciurus hudsonicus",
                 opossumHabitats, "range", "tracks", "photo");
-        Animal woodchuck = new Animal("Woodchuck", "Rodentia", "Sciuridae", "Marmota monax",
+        Mammal woodchuck = new Mammal("Woodchuck", "Rodentia", "Sciuridae", "Marmota monax",
                 opossumHabitats, "range", "tracks", "photo");
-        Animal southernFlyingSquirrel = new Animal("SouthernFlyingSquirrel", "Rodentia", "Sciuridae", "Glaucomys volans",
+        Mammal southernFlyingSquirrel = new Mammal("SouthernFlyingSquirrel", "Rodentia", "Sciuridae", "Glaucomys volans",
                 opossumHabitats, "range", "tracks", "photo");
 
+        Tree americanBeech = new Tree("AmericanBeech", "Fagales", "Fagaceae", "Fagus grandifolia", opossumHabitats, "range", "photo");
 
 
         habitatRepo.save(wetLands);
-        animalRepo.save(virginiaOpossum);
-        animalRepo.save(easternChipmunk);
-        animalRepo.save(easternGraySquirrel);
-        animalRepo.save(thirteenLinedSquirrel);
-        animalRepo.save(easternFoxSquirrel);
-        animalRepo.save(redSquirrel);
-        animalRepo.save(americanBeaver);
-        animalRepo.save(woodchuck);
-        animalRepo.save(southernFlyingSquirrel);
+        livingThingRepo.save(virginiaOpossum);
+        livingThingRepo.save(easternChipmunk);
+        livingThingRepo.save(easternGraySquirrel);
+        livingThingRepo.save(thirteenLinedSquirrel);
+        livingThingRepo.save(easternFoxSquirrel);
+        livingThingRepo.save(redSquirrel);
+        livingThingRepo.save(americanBeaver);
+        livingThingRepo.save(woodchuck);
+        livingThingRepo.save(southernFlyingSquirrel);
+        livingThingRepo.save(americanBeech);
 
     }
 }

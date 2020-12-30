@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Plants</title>
+</head>
+<body>
+
+<ul th:each="plant : ${plantsList}">
+    <li th:text="${plant.commonName}"></li>
+    <li th:text="${plant.species}"></li>
+
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Mammals</title>
+</head>
+<body>
+
+<ul th:each="mammal : ${mammalsList}">
+
+    <li th:text="${mammal.commonName}"></li>
+    <li th:text="${mammal.species}"></li>
+
+
+</ul>
+</body>
+</html>
