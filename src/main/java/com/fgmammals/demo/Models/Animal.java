@@ -105,7 +105,6 @@ public class Animal {
             }
         }
         displayedName += commonName.substring(k);
-
         return displayedName;
     }
 

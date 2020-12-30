@@ -16,14 +16,26 @@ public class AnimalController {
     @Resource
     private AnimalRepository animalRepo;
 
-    @RequestMapping("/animals/{commonName}")
-    public String displayAnimalByCommonName(@PathVariable String commonName, Model model){
-        model.addAttribute("animal",animalRepo.findByCommonName(commonName));
-        return "individualAnimalPageView";
-    }
 
     @RequestMapping("/home")
     public String displayHome() {
         return "home";
     }
+
+    @RequestMapping("/animals")
+    public String displayAllAnimalsInDatabase(Model model) {
+        model.addAttribute("animalsList", animalRepo.findAll());
+        return "allAnimalsView";
+    }
+
+    @RequestMapping("/animals/{commonName}")
+    public String displayAnimalByCommonName(@PathVariable String commonName, Model model) {
+        model.addAttribute("animal", animalRepo.findByCommonName(commonName));
+        return "individualAnimalPageView";
+    }
+
+
+
+
+
 }
