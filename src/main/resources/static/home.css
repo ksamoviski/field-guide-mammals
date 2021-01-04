@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    color: #666;
+    font: 1.65rem sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+#bgImage{
+    background-image: url(/images/watercolorWoods.jpeg);
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.frame{
+    height: 97%;
+    width: 94%;
+    position: fixed;
+    z-index: 2;
+    border: .125rem solid #413020;
+}
+
+#appTitleBar{
+background-color: #413020;
+bottom: 25%;
+color: #e3e3e1;
+padding: 3rem 2rem 3rem 2rem;
+position: fixed;
+z-index: 3;
+}
+
+h1{
+font-size: 3.5rem;
+font-weight: 700;
+text-align: center;
+text-transform: uppercase;
+}
+
+.subTitle{
+border-top: #e3e3e1 dotted .375rem;
+font-size: 1.6rem;
+font-weight: 300;
+margin-top: .75rem;
+padding-top: 1.25rem;
+text-align: center;
+}
