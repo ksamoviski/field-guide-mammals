@@ -12,6 +12,14 @@ html{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/*.container{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+
+/*}*/
+
 
 #bgImage{
     background-image: url(/images/watercolorWoods.jpeg);
@@ -22,12 +30,15 @@ html{
     z-index: 1;
 }
 
+
 .frame{
+    border: .125rem solid #413020;
     height: 97%;
     width: 94%;
     position: fixed;
     z-index: 2;
-    border: .125rem solid #413020;
+
+
 }
 
 #appTitleBar{
@@ -58,6 +69,13 @@ h1{
 }
 
 #button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContent{
     background-color: #413020;
     bottom: 10%;
     color: #e3e3e1;
