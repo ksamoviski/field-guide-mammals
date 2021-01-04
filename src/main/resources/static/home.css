@@ -31,38 +31,41 @@ html{
 }
 
 #appTitleBar{
-background-color: #413020;
-bottom: 25%;
-color: #e3e3e1;
-padding: 3rem 2rem 3rem 2rem;
-position: fixed;
-z-index: 3;
+    background-color: #413020;
+    bottom: 25%;
+    color: #e3e3e1;
+    padding: 3rem 2rem 3rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    width: 100%;
 }
 
 h1{
-font-size: 3.5rem;
-font-weight: 700;
-text-align: center;
-text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .subTitle{
-border-top: #e3e3e1 dotted .375rem;
-font-size: 1.6rem;
-font-weight: 300;
-margin-top: .75rem;
-padding-top: 1.25rem;
-text-align: center;
+    border-top: #e3e3e1 dotted .375rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: .75rem;
+    padding-top: 1.25rem;
+    text-align: center;
 }
 
 #button{
     background-color: #413020;
-    color: #e3e3e1;
-    padding: 2.25rem 3rem 2rem 3rem;
-    font-size: 2.25rem;
-    text-transform: uppercase;
-    cursor: pointer;
     bottom: 10%;
-    position: fixed;
+    color: #e3e3e1;
+    cursor: pointer;
+    font-size: 2.25rem;
     font-weight: 300;
+    margin-top: 1rem;
+    padding: 2.25rem 3rem 2rem 3rem;
+    position: fixed;
+    text-transform: uppercase;
 }
