@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>all sightings</title>
+</head>
+<body>
+
+<ul th:each = "observation : ${allObservations}">
+    <li th:text="${observation.date}"></li>
+    <li th:text="${observation.livingThing.commonName}"></li>
+
+
+</ul>
+
+
+
+
+</body>
+</html>
