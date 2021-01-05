@@ -1,0 +1,50 @@
+
+#background{
+    background-color: #808622;
+}
+
+#appTitleBar{
+    background-color: #413020;
+    bottom: 25%;
+    color: #e3e3e1;
+    padding: 3rem 2rem 3rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subTitle{
+    border-top: #e3e3e1 dotted .375rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: .75rem;
+    padding-top: 1.25rem;
+    text-align: center;
+}
+
+#button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContent{
+    background-color: #413020;
+    bottom: 10%;
+    color: #e3e3e1;
+    cursor: pointer;
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    padding: 2.25rem 3rem 2rem 3rem;
+    position: fixed;
+    text-transform: uppercase;
+}
