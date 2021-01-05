@@ -34,8 +34,9 @@ html{
 .frame{
     border: .125rem solid #413020;
     height: 97%;
-    width: 94%;
+    margin: 1rem;
     position: fixed;
+    width: 94%;
     z-index: 2;
 
 
