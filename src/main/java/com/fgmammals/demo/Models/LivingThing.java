@@ -10,9 +10,6 @@ public class LivingThing {
     @GeneratedValue
     private Long id;
 
-
-
-
     private String commonName;
     private String imageTitle;
     private String category;

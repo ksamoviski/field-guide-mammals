@@ -4,41 +4,38 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
-public class Location {
+public class Entry {
+
     @Id
     @GeneratedValue
     private Long id;
-    private String locationName;
-    private String address;
+    private String title;
 
-    @OneToMany (mappedBy = "location")
+    @OneToMany(mappedBy = "entry")
     private Collection<Observation> observations;
 
     public Long getId() {
         return id;
     }
 
-    public String getLocationName() {
-        return locationName;
-    }
-
-    public String getAddress() {
-        return address;
+    public String getTitle() {
+        return title;
     }
 
     public Collection<Observation> getObservations() {
         return observations;
     }
 
-
-    public Location(){
+    public Entry(){
     }
 
-    public Location(String locationName){
-        this.locationName = locationName;
+    public Entry(String title, Observation...observations){
+        this.title = title;
+        this.observations = Arrays.asList(observations);
     }
 
 
