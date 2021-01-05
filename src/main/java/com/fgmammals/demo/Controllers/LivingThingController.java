@@ -1,7 +1,6 @@
 package com.fgmammals.demo.Controllers;
 
 
-import com.fgmammals.demo.Repositories.AnimalRepository;
 import com.fgmammals.demo.Repositories.LivingThingRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

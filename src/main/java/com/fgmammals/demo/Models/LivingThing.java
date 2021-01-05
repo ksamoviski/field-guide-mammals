@@ -10,94 +10,54 @@ public class LivingThing {
     @GeneratedValue
     private Long id;
 
-    private String speciesOrder;
-    private String family;
-    private String species;
+
+
+
     private String commonName;
+    private String imageTitle;
+    private String category;
+    private String description;
 
-    priva  P2tt3rs0n
-    te String description;
+    public LivingThing(String commonName, String category, String description) {
+        this.commonName = commonName;
+        this.category = category;
+        this.description = description;
+    }
 
-    private String didYouKnow;
+    public LivingThing(String commonName, String imageTitle, String category, String description) {
+        this.commonName = commonName;
+        this.imageTitle = imageTitle;
+        this.category = category;
+        this.description = description;
+    }
 
-    @ManyToMany
-    private Collection<Habitat> habitats;
+    public LivingThing(String commonName, String category) {
+        this.commonName = commonName;
+        this.category = category;
+    }
 
-    private String range;
-    private String image;
+    public LivingThing(){
 
+    }
 
     public Long getId() {
         return id;
-    }
-
-    public String getSpeciesOrder() {
-        return speciesOrder;
-    }
-
-    public String getFamily() {
-        return family;
-    }
-
-
-    public String getSpecies() {
-        return species;
     }
 
     public String getCommonName() {
         return commonName;
     }
 
+    public String getImageTitle() {
+        return imageTitle;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
     public String getDescription() {
         return description;
-    }
-
-    public String getDidYouKnow() {
-        return didYouKnow;
-    }
-
-    public Collection<Habitat> getHabitats() {
-        return habitats;
-    }
-
-    public String getRange() {
-        return range;
-    }
-
-
-    public String getImage() {
-        return image;
-    }
-
-    public LivingThing() {
-    }
-
-    public LivingThing(String commonName, String speciesOrder, String family, String species, Collection<Habitat> habitats, String range, String image) {
-        this.commonName = commonName;
-        this.speciesOrder = speciesOrder;
-        this.family = family;
-        this.species = species;
-
-        this.description = "/textFiles/" + commonName + "Description.txt";
-        this.didYouKnow = "/textFiles/" + commonName + "DYK.txt";
-
-        this.habitats = habitats;
-        this.range = range;
-        this.image = image;
-    }
-
-    public String toDisplay() {
-        char[] nameToCharArray = commonName.toCharArray();
-        String displayedName = "";
-        int k = 0;
-        for (int i = 1; i < nameToCharArray.length; i++) {
-            if (Character.isUpperCase(nameToCharArray[i])) {
-                displayedName += commonName.substring(k, i) + " ";
-                k = i;
-            }
-        }
-        displayedName += commonName.substring(k);
-        return displayedName;
     }
 
 
