@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -14,6 +15,7 @@ public class Entry {
     @GeneratedValue
     private Long id;
     private String title;
+    private LocalDate date;
 
     @OneToMany(mappedBy = "entry")
     private Collection<Observation> observations;

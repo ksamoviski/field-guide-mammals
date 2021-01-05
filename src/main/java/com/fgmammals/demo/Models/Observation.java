@@ -21,8 +21,6 @@ public class Observation {
     @ManyToOne
     private Entry entry;
 
-
-    private LocalDate date;
     private String season;
     private String habitat;
     private String notes;
@@ -38,10 +36,6 @@ public class Observation {
 
     public Location getLocation() {
         return location;
-    }
-
-    public LocalDate getDate() {
-        return date;
     }
 
     public String getSeason() {
@@ -64,10 +58,9 @@ public class Observation {
     }
 
 
-    public Observation(LivingThing livingThing, Location location, LocalDate date, String season, String habitat, String notes) {
+    public Observation(LivingThing livingThing, Location location, String season, String habitat, String notes) {
         this.livingThing = livingThing;
         this.location = location;
-        this.date = date;
         this.season = season;
         this.habitat = habitat;
         this.notes = notes;
