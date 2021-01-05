@@ -9,12 +9,14 @@ public class LivingThing {
     @Id
     @GeneratedValue
     private Long id;
+
     private String speciesOrder;
     private String family;
     private String species;
     private String commonName;
 
-    private String description;
+    priva  P2tt3rs0n
+    te String description;
 
     private String didYouKnow;
 
