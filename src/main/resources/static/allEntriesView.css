@@ -20,20 +20,15 @@ h1{
     text-transform: uppercase;
 }
 
-/*.subTitle{
-    border-top: #e3e3e1 dotted .375rem;
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin-top: .75rem;
-    padding-top: 1.25rem;
-    text-align: center;
-}*/
+h2{
+    text-align: left;
+}
 
 #entryFilters{
     position: fixed;
     top: 23%;
     width: 40%;
-    margin-left: .75rem;
+    margin-left: .85rem;
 }
 
 .filtersList{
@@ -44,6 +39,7 @@ h1{
 .singleFilter{
     list-style-type: none;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .singleFilter a{
@@ -55,25 +51,33 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    z-index: 4;
 }
 
 .singleEntry{
     background-color: #e3e3e1;
-    color: #403021;
+    top: 25%;
+    color: #413020;
     cursor: pointer;
-    padding: 2.25rem 3rem 2rem 1rem;
+    margin-top: 1rem;
+    padding: 2.25rem 1rem 2rem 1rem;
     position: fixed;
     text-transform: uppercase;
-    top: 25%;
     width: 85%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.date{
+    text-align: right;
 }
 
 #button{
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    z-index: 4;
 }
 
 .buttonContent{
@@ -81,10 +85,10 @@ h1{
     bottom: 10%;
     color: #e3e3e1;
     cursor: pointer;
-    font-size: 2.25rem;
-    font-weight: 300;
+    font-size: 1.75rem;
+    font-weight: 700;
     margin-top: 1rem;
-    padding: 2.25rem 3rem 2rem 3rem;
+    padding: 2.25rem 2rem 2rem 2rem;
     position: fixed;
     text-transform: uppercase;
 }
