@@ -5,34 +5,74 @@
 
 #appTitleBar{
     background-color: #413020;
-    bottom: 25%;
     color: #e3e3e1;
     padding: 3rem 2rem 3rem 2rem;
     position: fixed;
+    top: 5%;
     width: 100%;
     z-index: 3;
 }
 
 h1{
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
 }
 
-.subTitle{
+/*.subTitle{
     border-top: #e3e3e1 dotted .375rem;
     font-size: 1.6rem;
     font-weight: 300;
     margin-top: .75rem;
     padding-top: 1.25rem;
     text-align: center;
+}*/
+
+#entryFilters{
+    position: fixed;
+    top: 23%;
+    width: 40%;
+    margin-left: .75rem;
 }
 
-#button{
+.filtersList{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.singleFilter{
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.singleFilter a{
+    text-decoration: none;
+    color: #413020;
+}
+
+#entriesList {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.singleEntry{
+    background-color: #e3e3e1;
+    color: #403021;
+    cursor: pointer;
+    padding: 2.25rem 3rem 2rem 1rem;
+    position: fixed;
+    text-transform: uppercase;
+    top: 25%;
+    width: 85%;
+}
+
+#button{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
