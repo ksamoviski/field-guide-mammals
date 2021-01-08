@@ -19,4 +19,10 @@ public class EntryController {
         model.addAttribute("entries", entryRepo.findAll());
         return "allEntriesView";
         }
+
+    @RequestMapping("/add-entry")
+    public String displayaddEntryPage(){
+        return "addEntryView";
+    }
+
 }
