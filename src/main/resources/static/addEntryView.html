@@ -32,17 +32,34 @@
         <div class="thirdRow">
             <input placeholder="Date" type="date" value="2010-01-01" id="date" name="date" required />
 
-            <label for="pets">Choose a pet:</label>
-            <select name="pets" id="pets">
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="rabbit">Rabbit</option>
-                <option value="mini horse">Mini Horse</option>
-                <option value="lizard">Lizard</option>
+            <select name="seasonSelect" class="dropDown" id="seasonDropdown" for="seasonOptions">
+                <div class="seasonOptions">
+                    <div class="seasonOptionsHeader">
+
+                     <option selected="selected" disabled="disabled">Season</option>
+                    </div>
+                    <option value="Winter">Winter</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Fall">Fall</option>
+                </div>
             </select>
 
-        </div>
+            <div name="habitatSelect" class="dropDown" id="habitatDropdown" for="habitatOptions">
+                <div class="habitatOptions">
 
+            <div class="habitatOptions">
+                <option selected="selected" disabled="disabled">Habitat</option>
+                <input type="checkbox" id="Wetlands" name="wetlandsHabitat">
+                <label for="Wetlands">Wetlands</label><br>
+
+                <input type="checkbox" id="Forest" name="wetlandsHabitat">
+                <label for="Wetlands">Forest</label><br>
+            </div>
+
+                </div>
+            </div>
+        </div>
 
     </section>
 
