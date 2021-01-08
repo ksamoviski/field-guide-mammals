@@ -14,9 +14,23 @@ public class EntryController {
     private EntryRepository entryRepo;
 
 
+    @RequestMapping("/home")
+    public String displayHomePage(Model model) {
+        model.addAttribute("home", entryRepo.findAll());
+        return "home";
+    }
+
+
     @RequestMapping("/entries")
         public String displayEntriesPage(Model model) {
         model.addAttribute("entries", entryRepo.findAll());
         return "allEntriesView";
         }
+
+        @RequestMapping("/add-entry")
+    public String displayAddEntryPage(Model model) {
+        model.addAttribute("addEntry", entryRepo.findAll());
+        return "addEntryView";
+    }
+
 }
