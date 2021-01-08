@@ -7,20 +7,19 @@
 }
 
 html{
-   color:#413020;
+    color:#413020;
     font: 1.65rem sans-serif;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 input {
-    font-size: 1rem;
-    vertical-align: middle;
-    padding: .75rem;
-    color: #413020;
     background-color: #e3e3e1;
     border: 3px solid #413020;
+    color: #413020;
     font: 1.65rem sans-serif;
     font-family: 'Josefin Sans', sans-serif;
+    padding: .75rem;
+    vertical-align: middle;
   }
 
 .frame{

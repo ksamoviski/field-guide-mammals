@@ -73,11 +73,9 @@ h2{
     padding: .75rem;}
 
 #button{
-    position: fixed;
     bottom: 10%;
     margin: 1rem 3.3rem;
     position: fixed;
-    bottom: 10%;
 }
 
 .buttonContent{
@@ -86,7 +84,6 @@ h2{
     cursor: pointer;
     font-size: 1.75rem;
     font-weight: 700;
-    margin-top: 1rem;
     padding: 2.25rem 2rem 2rem 2rem;
     text-transform: uppercase;
 }
