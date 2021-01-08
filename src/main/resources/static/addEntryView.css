@@ -20,57 +20,31 @@ h1{
     text-transform: uppercase;
 }
 
-h2{
-    text-align: left;
-    padding: 2.25rem 1rem 2rem 1rem;
-}
 
-#entryFilters{
+#entryForm{
     position: fixed;
-    top: 23%;
-    width: 40%;
-    margin-left: .85rem;
-}
-
-.filtersList{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.singleFilter{
-    list-style-type: none;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.singleFilter a{
-    text-decoration: none;
-    color: #413020;
-}
-
-#entriesList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 4;
-}
-
-.singleEntry{
-    background-color: #e3e3e1;
     top: 25%;
-    color: #413020;
-    cursor: pointer;
-    margin-top: 1rem;
-    position: fixed;
-    text-transform: uppercase;
     width: 85%;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    margin: 0rem 2.8rem;
 }
 
-.date{
-    text-align: right;
-    padding: .75rem;}
+.entryTitle{
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+  .entryTitle input {
+    width: 100%;
+  }
+
+  .location{
+    padding-bottom: 1rem;
+}
+
+.location input {
+    width: 100%;
+  }
+
 
 #button{
     position: fixed;

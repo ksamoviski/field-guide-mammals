@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="addEntryView.css">
+    <script src="https://kit.fontawesome.com/bc4c41a967.js" crossorigin="anonymous"></script>
+
+
+    <title>My Nature Journal Entries</title>
+</head>
+
+<body id="background">
+
+    <div class="frame"></div>
+
+    <section id="appTitleBar">
+        <h1><span style="font-weight: 700;">My</span> Nature Journal</h1>
+    </section>
+
+    <section id="entryForm">
+
+        <div class="entryTitle">
+            <input placeholder="Title of Journal Entry" type="text" id="entryTitle" name="entryTitle" required />
+        </div>
+
+        <div class="location">
+            <input placeholder="Location" type="text" id="location" name="location" />
+        </div>
+
+        <div class="thirdRow">
+            <input placeholder="Date" type="date" value="2010-01-01" id="date" name="date" required />
+
+            <label for="pets">Choose a pet:</label>
+            <select name="pets" id="pets">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="mini horse">Mini Horse</option>
+                <option value="lizard">Lizard</option>
+            </select>
+
+        </div>
+
+
+    </section>
+
+    <section id="button">
+        <div class="buttonContent">
+            Add A New Journal Entry
+        </div>
+    </section>
+
+    <section id="footer">
+
+        <i class="fas fa-cog"></i>
+    </section>
+
+</body>
+
+</html>
