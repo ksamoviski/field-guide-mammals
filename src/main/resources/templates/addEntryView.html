@@ -13,42 +13,46 @@
 
 <body id="background">
 
-    <div class="frame"></div>
+<h1 id="testing"></h1>
 
-    <section id="appTitleBar">
-        <h1><span style="font-weight: 700;">My</span> Nature Journal</h1>
-    </section>
+<div class="frame"></div>
 
-    <section id="entryForm">
+<section id="appTitleBar">
+    <h1><span style="font-weight: 700;">My</span> Nature Journal</h1>
+</section>
 
-        <div class="entryTitle">
-            <input placeholder="Title of Journal Entry" type="text" id="entryTitle" name="entryTitle" required />
-        </div>
+<section id="entryForm">
 
-        <div class="location">
-            <input placeholder="Location" type="text" id="location" name="location" />
-        </div>
+    <div class="entryTitle">
+        <input placeholder="Title of Journal Entry" type="text" id="entryTitle" name="entryTitle" required/>
+    </div>
 
-        <div class="thirdRow">
-            <input placeholder="Date" type="date" value="2010-01-01" id="date" name="date" required />
+    <div class="location">
+        <input placeholder="Location" type="text" id="location" name="location"/>
+    </div>
 
-            <select name="seasonSelect" class="dropDown" id="seasonDropdown" for="seasonOptions">
-                <div class="seasonOptions">
-                    <div class="seasonOptionsHeader">
+    <button class="thirdRow">
+        <input placeholder="Date" type="date" value="2010-01-01" id="date" name="date" required/>
 
-                     <option selected="selected" disabled="disabled">Season</option>
-                    </div>
-                    <option value="Winter">Winter</option>
-                    <option value="Spring">Spring</option>
-                    <option value="Summer">Summer</option>
-                    <option value="Fall">Fall</option>
+        <select name="seasonSelect" class="dropDown" id="seasonDropdown" for="seasonOptions">
+            <div class="seasonOptions">
+                <div class="seasonOptionsHeader">
+
+                    <option selected="selected" disabled="disabled">Season</option>
                 </div>
-            </select>
+                <option value="Winter">Winter</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+            </div>
+        </select>
 
-            <div name="habitatSelect" class="dropDown" id="habitatDropdown" for="habitatOptions">
-                <div class="habitatOptions">
+        <div name="seasonSelect" class="dropDown" id="habitatDropdown" for="seasonOptions">
+            <div class="seasonOptions">
+                <div class="seasonOptionsHeader">
 
-            <div class="habitatOptions">
+                    <option selected="selected" disabled="disabled">Season</option>
+                </div>
                 <option selected="selected" disabled="disabled">Habitat</option>
                 <input type="checkbox" id="Wetlands" name="wetlandsHabitat">
                 <label for="Wetlands">Wetlands</label><br>
@@ -56,23 +60,37 @@
                 <input type="checkbox" id="Forest" name="wetlandsHabitat">
                 <label for="Wetlands">Forest</label><br>
             </div>
-
-                </div>
-            </div>
+        </div>
+        </select>
         </div>
 
-    </section>
 
-    <section id="button">
-        <div class="buttonContent">
-            Add A New Journal Entry
-        </div>
-    </section>
+        <!--            <button class="accordion">-->
+        <!--            <div class="habitatOptions">-->
+        <!--                <option selected="selected" disabled="disabled">Habitat</option>-->
+        <!--                <input type="checkbox" id="Wetlands" name="wetlandsHabitat">-->
+        <!--                <label for="Wetlands">Wetlands</label><br>-->
 
-    <section id="footer">
+        <!--                <input type="checkbox" id="Forest" name="wetlandsHabitat">-->
+        <!--                <label for="Wetlands">Forest</label><br>-->
+        <!--                </div>-->
+        <!--            </button>-->
 
-        <i class="fas fa-cog"></i>
-    </section>
+
+</section>
+
+<section id="button">
+    <div class="buttonContent">
+        Add A New Journal Entry
+    </div>
+</section>
+
+<section id="footer">
+
+    <i class="fas fa-cog"></i>
+</section>
+
+<!--    <script src = "/js/addEntry.js"></script>-->
 
 </body>
 
