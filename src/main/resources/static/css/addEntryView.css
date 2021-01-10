@@ -75,6 +75,10 @@ select option {
     line-height: 10rem;
 }
 
+.dropdownTitle{
+    font-size: 2rem;
+}
+
 
 #button{
     bottom: 10%;

@@ -31,12 +31,13 @@
         <input placeholder="Location" type="text" id="location" name="location"/>
     </div>
 
-    <button class="thirdRow">
-        <input placeholder="Date" type="date" value="2010-01-01" id="date" name="date" required/>
+    <div class="thirdRow">
+        <input type="date" value="2010-01-01" id="date" name="date" required/>
+
 
         <select name="seasonSelect" class="dropDown" id="seasonDropdown" for="seasonOptions">
-            <div class="seasonOptions">
-                <div class="seasonOptionsHeader">
+            <div class="options">
+                <div class="optionsHeader">
 
                     <option selected="selected" disabled="disabled">Season</option>
                 </div>
@@ -47,20 +48,19 @@
             </div>
         </select>
 
-        <div name="seasonSelect" class="dropDown" id="habitatDropdown" for="seasonOptions">
-            <div class="seasonOptions">
-                <div class="seasonOptionsHeader">
+        <select name="habitatSelect" class="dropDown" id="habitatDropdown" for="habitatOptions">
+            <div class="options">
+                <div class="optionsHeader">
 
-                    <option selected="selected" disabled="disabled">Season</option>
+                    <option selected="selected" disabled="disabled">Habitat</option>
                 </div>
-                <option selected="selected" disabled="disabled">Habitat</option>
-                <input type="checkbox" id="Wetlands" name="wetlandsHabitat">
-                <label for="Wetlands">Wetlands</label><br>
 
-                <input type="checkbox" id="Forest" name="wetlandsHabitat">
-                <label for="Wetlands">Forest</label><br>
+                <option value="Wetlands">Wetlands</option>
+                <option value="Forest">Forest</option>
+                <option value="Another">Another</option>
+
+
             </div>
-        </div>
         </select>
         </div>
 
@@ -90,7 +90,7 @@
     <i class="fas fa-cog"></i>
 </section>
 
-<!--    <script src = "/js/addEntry.js"></script>-->
+    <script src = "/js/addEntry.js"></script>
 
 </body>
 

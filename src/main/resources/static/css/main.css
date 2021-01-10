@@ -27,6 +27,6 @@ input {
     height: 97%;
     margin: 1rem;
     position: fixed;
-    width: 94%;
+    /*width: 94%;*/
     z-index: 2;
 }
