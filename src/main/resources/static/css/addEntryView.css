@@ -75,7 +75,7 @@ select option {
     line-height: 10rem;
 }
 
-.dropdownTitle{
+#testingOption {
     font-size: 2rem;
 }
 
