@@ -75,9 +75,17 @@ select option {
     line-height: 10rem;
 }
 
-#testingOption {
-    font-size: 2rem;
+.dropDownHeader {
+    font-size: 1.7rem;
+    color: #413020;
 }
+
+.dropDownMenu {
+    background-color: #e3e3e1;
+    border: .125rem solid #413020;
+
+}
+
 
 
 #button{
