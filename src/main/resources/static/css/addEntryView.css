@@ -83,7 +83,31 @@ select option {
 .dropDownMenu {
     background-color: #e3e3e1;
     border: .125rem solid #413020;
+}
 
+#habitatButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e3e1;
+
+}
+
+#habitatButton h5 {
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+
+#habitatDropdown {
+    width:33.33%;
+    right:0;
+    position:absolute;
+    background-color: #e3e3e1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
