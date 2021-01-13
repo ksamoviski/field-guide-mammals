@@ -10,6 +10,7 @@ const habitats = ["Wetlands", "Forest", "My Backyard", "My Driveway", "Archer's 
 habitatButton.addEventListener('click', () => {
         if (clicked === false) {
             habitats.forEach(habitat => {
+                let itemClicked = false;
                 let item = document.createElement('h4');
                 item.className = "habitatItem";
                 item.innerText = habitat;
@@ -24,10 +25,16 @@ habitatButton.addEventListener('click', () => {
                 })
 
                 item.addEventListener('click', () => {
-                    item.style.color = "chartreuse";
-                    item.style.fontSize = "140%";
-                    setTimeout(finalItemShow, 200, item);
-                    item.classList.add('shownItem');
+                    if (itemClicked === false) {
+                        item.style.color = "chartreuse";
+                        item.style.fontSize = "140%";
+                        setTimeout(finalItemShow, 200, item);
+                        item.classList.add('shownItem');
+                        itemClicked = true;
+                    } else {
+                        item.style.color = "#413020";
+                        itemClicked = false;
+                    }
                 });
             });
             clicked = true;
