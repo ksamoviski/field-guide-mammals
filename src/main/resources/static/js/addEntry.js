@@ -38,6 +38,11 @@ habitatButton.addEventListener('click', () => {
                 });
             });
             clicked = true;
+        } else {
+            for (let i = 0; i < habitats.length; i++) {
+                habitatDropdown.removeChild(habitatDropdown.lastChild);
+            }
+            clicked = false;
         }
     }
 );
