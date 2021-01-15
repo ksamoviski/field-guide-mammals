@@ -28,6 +28,11 @@ h1{
     margin: 0rem 2.8rem;
 }
 
+::placeholder {
+    color: #808622;
+}
+
+
 .entryTitle{
     padding-bottom: 1rem;
     width: 100%;
@@ -62,22 +67,16 @@ h1{
 
 select {
     border: none;
+    font: 1.65rem 'Josefin Sans', sans-serif;
+    color: #808622;
 }
 
 select option:disabled {
     background-color: #e3e3e1;
-    color: #413020;
-    /*font-weight: 900;*/
-    /*padding: .5rem 0rem .5rem 0rem;*/
 }
 
 select option {
     line-height: 10rem;
-}
-
-.dropDownHeader {
-    font-size: 1.7rem;
-    color: #413020;
 }
 
 .dropDownMenu {
@@ -92,7 +91,6 @@ select option {
     align-items: center;
     background-color: #e3e3e1;
     border: 3px solid #413020;
-
 }
 
 #habitatButton h5 {
