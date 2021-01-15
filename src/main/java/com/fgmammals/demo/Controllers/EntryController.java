@@ -22,15 +22,22 @@ public class EntryController {
 
 
     @RequestMapping("/entries")
-        public String displayEntriesPage(Model model) {
+    public String displayEntriesPage(Model model) {
         model.addAttribute("entries", entryRepo.findAll());
         return "allEntriesView";
-        }
+    }
 
-        @RequestMapping("/add-entry")
+    @RequestMapping("/add-entry")
     public String displayAddEntryPage(Model model) {
         model.addAttribute("addEntry", entryRepo.findAll());
         return "addEntryView";
+    }
+
+    @RequestMapping("/all-entries")
+    public String displayAllEntriesPage(Model model) {
+        model.addAttribute("addEntry", entryRepo.findAll());
+        return "addEntryView";
+
     }
 
 }
