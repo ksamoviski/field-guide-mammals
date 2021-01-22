@@ -1,0 +1,162 @@
+
+#background{
+    background-color: #808622;
+}
+
+#appTitleBar{
+    background-color: #413020;
+    color: #e3e3e1;
+    padding: 3rem 2rem 3rem 2rem;
+    position: fixed;
+    top: 5%;
+    width: 100%;
+    z-index: 3;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#entryForm{
+    position: fixed;
+    top: 25%;
+    width: 85%;
+    margin: 0rem 2.8rem;
+}
+
+::placeholder {
+    color: #808622;
+}
+
+
+.entryTitle{
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+  .entryTitle input {
+    width: 100%;
+  }
+
+  .location{
+    padding-bottom: 1rem;
+}
+
+.location input {
+    width: 100%;
+  }
+
+.thirdRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.accordion {
+    background-color: #e3e3e1;
+    border: 3px solid #413020;
+    color: #413020;
+    font: 1.65rem sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: .75rem;
+    vertical-align: middle;
+}
+
+select {
+    border: none;
+    font: 1.65rem 'Josefin Sans', sans-serif;
+    color: #808622;
+}
+
+select option:disabled {
+    background-color: #e3e3e1;
+}
+
+select option {
+    line-height: 10rem;
+}
+
+.dropDownMenu {
+    background-color: #e3e3e1;
+    border: .125rem solid #413020;
+}
+
+#habitatButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e3e1;
+    border: 3px solid #413020;
+}
+
+#habitatButton h5 {
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+
+#habitatDropdown {
+    width:33.33%;
+    right:0;
+    position:absolute;
+    background-color: #e3e3e1;
+
+    border-left: 3px solid #413020;
+    border-bottom: 3px solid #413020;
+    border-right: 3px solid #413020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.habitatItem {
+    padding-top: 2%;
+    transition: .1s;
+}
+
+.habitatItemHover {
+    color:darkred;
+    font-size: 105%;
+    transition: .3s;
+}
+
+.shownItem {
+    font-size: 130%;
+    color:darkmagenta;
+
+}
+
+.finalItem {
+    font-size: 100%;
+    color:darkblue;
+}
+
+
+#button{
+    bottom: 10%;
+    margin: 1rem 3.3rem;
+    position: fixed;
+}
+
+.buttonContent{
+    background-color: #413020;
+    color: #e3e3e1;
+    cursor: pointer;
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: 2.25rem 2rem 2rem 2rem;
+    text-transform: uppercase;
+}
+
+#footer{
+    bottom: 2%;
+    color: #413020;
+    font-size: 3em;
+    padding: 0rem 0rem 0rem 32rem;
+    position: fixed;
+    text-align: right;
+}
