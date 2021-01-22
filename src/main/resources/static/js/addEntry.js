@@ -7,6 +7,7 @@ let clicked = false;
 const habitats = ["Wetlands", "Forest", "My Backyard", "My Driveway", "Archer's Backyard", "The Park"];
 
 
+
 habitatButton.addEventListener('click', () => {
         if (clicked === false) {
             habitats.forEach(habitat => {
