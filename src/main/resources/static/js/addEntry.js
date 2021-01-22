@@ -19,11 +19,10 @@ habitatButton.addEventListener('click', () => {
                 item.addEventListener('mouseover', () => {
                     item.classList.add("habitatItemHover");
                 });
-
                 item.addEventListener('mouseout', () => {
                     item.classList.remove("habitatItemHover");
-                })
 
+                })
                 item.addEventListener('click', () => {
                     if (itemClicked === false) {
                         item.style.color = "chartreuse";
