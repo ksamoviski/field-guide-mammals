@@ -1,0 +1,107 @@
+
+#background{
+    background-color: #808622;
+}
+
+#appTitleBar{
+    background-color: #413020;
+    color: #e3e3e1;
+    padding: 3rem 2rem 3rem 2rem;
+    position: fixed;
+    top: 5%;
+    width: 100%;
+    z-index: 3;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: left;
+    padding: 2.25rem 1rem 2rem 1rem;
+}
+
+#entryFilters{
+    position: fixed;
+    top: 23%;
+    width: 40%;
+    margin-left: .85rem;
+}
+
+.filtersList{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.singleFilter{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.singleFilter a{
+    text-decoration: none;
+    color: #413020;
+}
+
+#entriesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 4;
+}
+
+.singleEntry{
+    background-color: #e3e3e1;
+    top: 25%;
+    color: #413020;
+    cursor: url(../images/morel.png), auto;
+    margin-top: 1rem;
+    position: fixed;
+    text-transform: uppercase;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.date{
+    text-align: right;
+    padding: .75rem;}
+
+#button{
+    bottom: 10%;
+    margin: 1rem 3.3rem;
+    position: fixed;
+}
+
+.buttonContent {
+    background-color: #413020;
+    color: #e3e3e1;
+    cursor: url(../images/morel.png), auto;
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: 2.25rem 2rem 2rem 2rem;
+    text-transform: uppercase;
+}
+
+.buttonContent a{
+    color: #e3e3e1;
+    text-decoration:none;
+}
+
+.buttonContent:checked {
+    background: orange;
+}
+
+#footer{
+    bottom: 2%;
+    color: #413020;
+    font-size: 3em;
+    padding: 0rem 0rem 0rem 32rem;
+    position: fixed;
+    text-align: right;
+}
