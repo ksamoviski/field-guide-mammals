@@ -28,7 +28,7 @@ habitatButton.addEventListener('click', () => {
                     if (itemClicked === false) {
                         // item.style.color = "chartreuse";
                         // item.style.fontSize = "140%";
-                        setTimeout(finalItemShow, 200, item);
+                        setTimeout(finalItemShow, 300, item);
                         item.classList.add('shownItem');
                         itemClicked = true;
                     } else {
