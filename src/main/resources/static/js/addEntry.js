@@ -26,13 +26,13 @@ habitatButton.addEventListener('click', () => {
                 })
                 item.addEventListener('click', () => {
                     if (itemClicked === false) {
-                        item.style.color = "chartreuse";
-                        item.style.fontSize = "140%";
+                        // item.style.color = "chartreuse";
+                        // item.style.fontSize = "140%";
                         setTimeout(finalItemShow, 200, item);
                         item.classList.add('shownItem');
                         itemClicked = true;
                     } else {
-                        item.style.color = "#413020";
+                        // item.style.color = "#ccc";
                         itemClicked = false;
                     }
                 });
@@ -49,8 +49,8 @@ habitatButton.addEventListener('click', () => {
 
 function finalItemShow(item) {
     item.classList.remove('shownItem');
-    item.style.fontSize = "100%";
-    item.style.color = "darkblue";
+    // item.style.fontSize = "100%";
+    item.style.color = "#808622";
 };
 
 

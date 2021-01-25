@@ -93,46 +93,40 @@ select option {
     border: 3px solid #413020;
 }
 
-#habitatButton h5 {
-    font-size: 1.7rem;
-    font-weight: normal;
+#habitatButton {
+    font-size: 1.65rem;
+    color: #808622;
+    padding-right: .5rem;
 }
 
-#habitatDropdown {
-    width:33.33%;
-    right:0;
-    position:absolute;
-    background-color: #e3e3e1;
 
-    border-left: 3px solid #413020;
-    border-bottom: 3px solid #413020;
-    border-right: 3px solid #413020;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#habitatDropdown {
+    width: 33.33%;
+    right: 0;
+    position: absolute;
+    background-color: #e3e3e1;
 }
 
 .habitatItem {
-    padding-top: 2%;
-    transition: .1s;
+    padding: 1rem;
+    /*transition: .1s;*/
 }
 
-.habitatItemHover {
-    color:darkred;
-    font-size: 105%;
-    transition: .3s;
-}
+/*.habitatItemHover {*/
+/*    color:darkred;*/
+/*    font-size: 105%;*/
+/*    transition: .3s;*/
+/*}*/
 
 .shownItem {
-    font-size: 130%;
-    color:darkmagenta;
+    font-size: 1.65rem;
+    color:#413020;
 
 }
 
 .finalItem {
-    font-size: 100%;
-    color:darkblue;
+    /*font-size: 100%;*/
+    color:#808622;
 }
 
 

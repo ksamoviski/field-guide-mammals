@@ -53,8 +53,9 @@ h1{
 
 }
 
-.buttonContent:checked {
-     background: orange;
- }
+.buttonContent a{
+    color: #e3e3e1;
+    text-decoration: none;
+}
 
 
