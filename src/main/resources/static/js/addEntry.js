@@ -12,14 +12,18 @@ habitatButton.addEventListener('click', () => {
         if (clicked === false) {
             habitats.forEach(habitat => {
                 let itemClicked = false;
-                let item = document.createElement('h4');
+
+                let item = document.createElement('p');
                 item.className = "habitatItem";
                 item.innerText = habitat;
                 habitatDropdown.appendChild(item);
 
                 item.addEventListener('mouseover', () => {
-                    item.classList.add("habitatItemHover");
+                    // item.classList.add("habitatItemHover");
+
+                    item.style.color = "darkred";
                 });
+
                 item.addEventListener('mouseout', () => {
                     item.classList.remove("habitatItemHover");
 
@@ -28,9 +32,11 @@ habitatButton.addEventListener('click', () => {
                     if (itemClicked === false) {
                         // item.style.color = "chartreuse";
                         // item.style.fontSize = "140%";
+
                         setTimeout(finalItemShow, 300, item);
                         item.classList.add('shownItem');
                         itemClicked = true;
+
                     } else {
                         // item.style.color = "#ccc";
                         itemClicked = false;

@@ -10,17 +10,23 @@ html{
     color:#413020;
     font: 1.65rem sans-serif;
     font-family: 'Josefin Sans', sans-serif;
+    cursor: url(../images/morel.png), auto;
 }
 
-
-
-.frame{
-    border: .125rem solid #413020;
-    height: 97%;
-    margin: 1rem;
-    position: fixed;
-    width: 94%;
-    /*z-index: 2;*/
+a{
+    cursor: url(../images/morel.png), auto;
 }
 
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame div {
+    width: 95vw;
+    height: 95vh;
+    border: .25rem solid #413020;
+    margin: 1.75rem 0rem;
+}
 
