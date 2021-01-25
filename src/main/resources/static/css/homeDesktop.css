@@ -7,3 +7,14 @@
     margin-left: 7.5rem;
     position: fixed;
 }
+
+.frame div {
+    margin: .75rem 0rem;}
+
+
+#footer {
+    bottom: 3vh;
+    font-size: 3em;
+    position: fixed;
+    right: 5vw;
+}
