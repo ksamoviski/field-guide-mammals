@@ -7,9 +7,6 @@
     z-index: 1;
 }
 
-
-
-
 #appTitleBar{
     background-color: #413020;
     bottom: 25%;
@@ -45,7 +42,6 @@ h1{
 .buttonContent {
     background-color: #413020;
     color: #e3e3e1;
-    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto;
     font-size: 1.75rem;
     font-weight: 700;
     padding: 2.25rem 2rem 2rem 2rem;
@@ -53,8 +49,11 @@ h1{
 
 }
 
-.buttonContent:checked {
-     background: orange;
- }
+.buttonContent a{
+    color: #e3e3e1;
+    text-decoration: none;
+}
+
+
 
 
