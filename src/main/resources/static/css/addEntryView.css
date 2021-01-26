@@ -22,16 +22,16 @@ h1{
 
 
 #entryForm{
+    margin: 0rem 2.8rem;
     position: fixed;
     top: 25%;
     width: 85%;
-    margin: 0rem 2.8rem;
 }
 
 ::placeholder {
     color: #808622;
+    vertical-align: top;
 }
-
 
 .entryTitle{
     padding-bottom: 1rem;
@@ -68,23 +68,17 @@ h1{
 input {
     background-color: #e3e3e1;
     border: 3px solid #413020;
-    color: #413020;
     font: 1.65rem sans-serif;
     font-family: 'Josefin Sans', sans-serif;
     padding: .75rem;
-    vertical-align: middle;
     width: 97%;
 }
 
 select {
     border: none;
-    font: 1.65rem 'Josefin Sans', sans-serif;
     color: #808622;
+    font: 1.65rem 'Josefin Sans', sans-serif;
 }
-
-/*select option:disabled {*/
-/*    background-color: #e3e3e1;*/
-/*}*/
 
 select option {
     font-size: .5rem;
@@ -97,61 +91,37 @@ select option {
 }
 
 #habitatButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background-color: #e3e3e1;
     border: 3px solid #413020;
-}
-
-#habitatButton {
     font-size: 1.65rem;
     color: #808622;
-    padding-right: 3rem;
-}
-
-
-#habitatDropdown {
-    width: 33.33%;
-    right: 0;
-    position: absolute;
-    background-color: #e3e3e1;
+    padding: .1rem .5rem 0rem .5rem;
 }
 
 .habitatItem {
     padding: 1rem;
-    /*transition: .1s;*/
 }
-
-/*.habitatItemHover {*/
-/*    color:darkred;*/
-/*    font-size: 105%;*/
-/*    transition: .3s;*/
-/*}*/
 
 .shownItem {
     font-size: 1.65rem;
     color:#413020;
-
 }
 
 .finalItem {
-    /*font-size: 100%;*/
     color:#808622;
 }
 
-
-#button{
-    bottom: 10%;
-    margin: 1rem 3.3rem;
-    position: fixed;
+.notes{
+    height: 22rem;
+    margin: 1rem 0rem;
+    outline: none;
+    overflow: hidden;
+    width: 100%;
 }
 
 .buttonContent{
     background-color: #413020;
     color: #e3e3e1;
-    /*cursor: pointer;*/
     font-size: 1.75rem;
     font-weight: 700;
     padding: 2.25rem 2rem 2rem 2rem;
@@ -159,10 +129,8 @@ select option {
 }
 
 #footer{
-    bottom: 3rem;
     color: #413020;
     font-size: 3em;
-    padding: 0rem 0rem 0rem 32rem;
-    position: fixed;
+    margin-top: 1rem;
     text-align: right;
 }
