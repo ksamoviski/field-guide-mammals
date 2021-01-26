@@ -21,11 +21,10 @@ h1{
 }
 
 
-#entryForm{
+#container{
     margin: 0rem 2.8rem;
     position: fixed;
     top: 25%;
-    width: 85%;
 }
 
 ::placeholder {
@@ -95,7 +94,7 @@ select option {
     border: 3px solid #413020;
     font-size: 1.65rem;
     color: #808622;
-    padding: .1rem .5rem 0rem .5rem;
+    padding: 1.1rem .5rem 0rem .5rem;
 }
 
 .habitatItem {
