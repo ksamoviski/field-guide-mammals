@@ -50,6 +50,10 @@ h1{
     color: #413020;
 }
 
+#entriesList{
+    width: 100%;
+}
+
 h2{
     text-align: left;
     padding: 2.25rem 1rem 2rem 1rem;
@@ -70,6 +74,10 @@ h2{
 .date{
     text-align: right;
     padding: .75rem;}
+
+#button{
+    width:100%;
+}
 
 .buttonContent{
     background-color: #413020;
