@@ -42,9 +42,9 @@ public class Populator implements CommandLineRunner {
         Observation observation3 = new Observation(mushroom, location, "Season", "Habitat", "Notes");
 
 
-        Entry entry1 = new Entry("Title", observation1);
-        Entry entry2= new Entry("Title", observation2);
-        Entry entry3 = new Entry("Title", observation3);
+        Entry entry1 = new Entry("Title One", observation1);
+        Entry entry2= new Entry("Title Two", observation2);
+        Entry entry3 = new Entry("Title Three", observation3);
 
         livingThingRepository.save(bird);
         livingThingRepository.save(tree);

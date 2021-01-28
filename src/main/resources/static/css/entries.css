@@ -61,12 +61,12 @@ h2{
 
 .singleEntry{
     background-color: #e3e3e1;
-    top: 25%;
+    /*top: 25%;*/
     color: #413020;
     margin-top: 1rem;
-    position: fixed;
+    /*position: fixed;*/
     text-transform: uppercase;
-    width: 85%;
+    width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr;
 }

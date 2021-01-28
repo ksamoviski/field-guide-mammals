@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -31,10 +32,14 @@
         </section>
 
     <section id="entriesList">
-        <div class="singleEntry">
-            <h2>Title of Entry</h2>
+        <ul>
+
+        <li class="singleEntry" th:each="entry:${entries}">
+            <h2 th:text="${entry.title}"></h2>
             <div class="date">00/00/0000</div>
-        </div>
+        </li>
+
+        </ul>
     </section>
 
     <section id="button">
