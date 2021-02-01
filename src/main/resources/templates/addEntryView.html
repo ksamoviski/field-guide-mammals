@@ -13,8 +13,6 @@
 
 <body id="background">
 
-<!--<h1 id="testing"></h1>-->
-
 <div class="frame">
     <div></div>
 </div>
@@ -23,8 +21,9 @@
     <h1><span style="font-weight: 700;">My</span> Nature Journal</h1>
 </section>
 
-<section id="entryForm">
+<section id="container">
 
+<section id="entryForm">
     <div class="entryTitle">
         <input placeholder="Title of Journal Entry" type="text" id="entryTitle" name="entryTitle" required/>
     </div>
@@ -46,40 +45,16 @@
         </select>
 
         <div id="habitatButton">Habitat</div>
-
-
-<!--        <select class="dropDownMenu dropDownHeader">-->
-<!--            <option value="" disabled selected hidden>Habitat</option>-->
-<!--            <option value="">Wetlands</option>-->
-<!--            <option value="">Forest</option>-->
-<!--            <option value="">other habitat</option>-->
-<!--            <option value="">maybe one more</option>-->
-<!--        </select>-->
-
     </div>
-<!--    id="shownItem"-->
+
     <div id="habitatDropdown">
-<!--        <h5 class="habitatItem finalItem">Wetlands</h5>-->
-<!--        <h5 class="habitatItem">Forest</h5>-->
-<!--        <h5 class="habitatItem">My backyard</h5>-->
-<!--        <h5 class="habitatItem">My Driveway</h5>-->
-
     </div>
 
-    <!--            <button class="accordion">-->
-    <!--            <div class="habitatOptions">-->
-    <!--                <option selected="selected" disabled="disabled">Habitat</option>-->
-    <!--                <input type="checkbox" id="Wetlands" name="wetlandsHabitat">-->
-    <!--                <label for="Wetlands">Wetlands</label><br>-->
+    <div class="notesTextArea">
 
-    <!--                <input type="checkbox" id="Forest" name="wetlandsHabitat">-->
-    <!--                <label for="Wetlands">Forest</label><br>-->
-    <!--                </div>-->
-    <!--            </button>-->
-
-
+    <input placeholder="Notes" type="text area" class="notes" name="notes">
+    </div>
 </section>
-
 
 <section id="button">
     <div class="buttonContent">
@@ -88,8 +63,9 @@
 </section>
 
 <section id="footer">
-
     <i class="fas fa-cog"></i>
+</section>
+
 </section>
 
 <script src="/js/addEntry.js"></script>
