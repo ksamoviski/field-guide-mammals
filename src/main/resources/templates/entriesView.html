@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/entries.css">
+    <script src="https://kit.fontawesome.com/bc4c41a967.js" crossorigin="anonymous"></script>
+
+
+    <title>My Nature Journal Entries</title>
+</head>
+
+<body id="background">
+
+<div class="frame">
+    <div></div>
+</div>
+
+<section id="appTitleBar">
+    <h1><span style="font-weight: 700;">My</span> Nature Journal</h1>
+</section>
+
+<section id="container">
+
+        <section id="entryFilters">
+            <ul class="filtersList">
+                <li class="singleFilter"><a href="#">Season</a></li>
+                <li class="singleFilter"><a href="#">Habitat</a></li>
+            </ul>
+        </section>
+
+    <section id="entriesList">
+        <ul>
+
+        <li class="singleEntry" th:each="entry:${entries}">
+            <h2 th:text="${entry.title}"></h2>
+            <div class="date">00/00/0000</div>
+        </li>
+
+        </ul>
+    </section>
+
+    <section id="button">
+        <div class="buttonContent">
+            Add A New Journal Entry
+        </div>
+    </section>
+
+    <section id="footer">
+        <i class="fas fa-cog"></i>
+    </section>
+
+</section>
+
+<script src="/js/addEntry.js"></script>
+
+</body>
+
+</html>

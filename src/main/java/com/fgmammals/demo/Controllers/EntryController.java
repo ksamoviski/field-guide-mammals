@@ -24,7 +24,7 @@ public class EntryController {
     @RequestMapping("/entries")
     public String displayEntriesPage(Model model) {
         model.addAttribute("entries", entryRepo.findAll());
-        return "allEntriesView";
+        return "entriesView";
     }
 
     @RequestMapping("/add-entry")
