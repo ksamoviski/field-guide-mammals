@@ -1,4 +1,4 @@
-const seasonDropdown = document.getElementById('seasonDropdown');
+const seasonDropdown = document.getElementById('seasonsButton');
 const habitatButton = document.getElementById('habitatButton');
 const habitatDropdown = document.getElementById('habitatDropdown');
 const dropDownHeader = document.querySelector('.dropDownHeader');

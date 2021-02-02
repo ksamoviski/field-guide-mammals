@@ -89,7 +89,7 @@ select option {
     width: 97%;
 }
 
-#habitatButton{
+.add-entry-dropdown {
     text-align: start;
     vertical-align: top;
     background-color: #e3e3e1;
