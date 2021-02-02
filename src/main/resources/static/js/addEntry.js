@@ -1,20 +1,41 @@
-const seasonDropdown = document.getElementById('seasonsButton');
-const habitatButton = document.getElementById('habitatButton');
-const habitatDropdown = document.getElementById('habitatDropdown');
-const dropDownHeader = document.querySelector('.dropDownHeader');
+const seasonButton = document.getElementById("seasonsButton");
+const seasonsDropdown = document.getElementById("seasonsDropdown");
 
-let clicked = false;
+const habitatButton = document.getElementById("habitatButton");
+const habitatDropdown = document.getElementById("habitatDropdown");
+
+
+let seasonClicked = false;
+let habitatClicked = false;
+
 const habitats = ["Wetlands", "Forest", "My Backyard", "My Driveway", "Archer's Backyard", "The Park"];
+const seasons = ["Winter", "Spring", "Summer", "Autumn"];
 
-
+seasonButton.addEventListener('click', () => {
+        if (seasonClicked === false) {
+            seasons.forEach(season => {
+                let item = document.createElement('p');
+                item.className = "dropdownItem";
+                item.innerText = season;
+                seasonsDropdown.appendChild(item);
+            })
+            seasonClicked = true;
+        } else {
+            for (let i = 0; i < seasons.length; i++) {
+                seasonsDropdown.removeChild(seasonsDropdown.lastChild);
+            }
+            seasonClicked = false;
+        }
+    }
+)
 
 habitatButton.addEventListener('click', () => {
-        if (clicked === false) {
+        if (habitatClicked === false) {
             habitats.forEach(habitat => {
                 let itemClicked = false;
 
                 let item = document.createElement('p');
-                item.className = "habitatItem";
+                item.className = "dropdownItem";
                 item.innerText = habitat;
                 habitatDropdown.appendChild(item);
 
@@ -43,12 +64,12 @@ habitatButton.addEventListener('click', () => {
                     }
                 });
             });
-            clicked = true;
+            habitatClicked = true;
         } else {
             for (let i = 0; i < habitats.length; i++) {
                 habitatDropdown.removeChild(habitatDropdown.lastChild);
             }
-            clicked = false;
+            habitatClicked = false;
         }
     }
 );
