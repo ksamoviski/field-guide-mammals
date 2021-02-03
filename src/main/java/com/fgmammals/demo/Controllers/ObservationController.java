@@ -17,6 +17,6 @@ public class ObservationController {
     @RequestMapping("/observations")
     public String displayAllObservationsInDatabase(Model model) {
         model.addAttribute("observationsList", observationRepo.findAll());
-        return "observationsView";
+        return "observations";
     }
 }

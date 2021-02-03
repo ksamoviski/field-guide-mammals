@@ -23,7 +23,7 @@ public class Observation {
 
     private String season;
     private String habitat;
-    private String notes;
+    private String description;
 
 
     public Long getId() {
@@ -47,7 +47,7 @@ public class Observation {
     }
 
     public String getNotes() {
-        return notes;
+        return description;
     }
 
     public Entry getEntry(){
@@ -58,12 +58,12 @@ public class Observation {
     }
 
 
-    public Observation(LivingThing livingThing, Location location, String season, String habitat, String notes) {
+    public Observation(LivingThing livingThing, Location location, String season, String habitat, String description) {
         this.livingThing = livingThing;
         this.location = location;
         this.season = season;
         this.habitat = habitat;
-        this.notes = notes;
+        this.description = description;
     }
 
 }

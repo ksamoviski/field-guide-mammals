@@ -38,6 +38,7 @@ public class Entry {
     public Entry(String title, Observation...observations){
         this.title = title;
         this.observations = Arrays.asList(observations);
+        date = LocalDate.now();
     }
 
 

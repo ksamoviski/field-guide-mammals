@@ -4,15 +4,14 @@ const seasonsDropdown = document.getElementById("seasonsDropdown");
 const habitatButton = document.getElementById("habitatButton");
 const habitatDropdown = document.getElementById("habitatDropdown");
 
-
 let seasonsClicked = false;
 let habitatsClicked = false;
 
 const seasons = ["Winter", "Spring", "Summer", "Autumn"];
 const habitats = ["Wetlands", "Forest", "My Backyard", "My Driveway", "Archer's Backyard", "The Park"];
 
-// const menus = [seasons, habitats];
-
+let chosenSeason;
+let chosenHabitats = new Set();
 
 const removeMenu = (menu) => {
     if (menu === "seasons") {
@@ -34,6 +33,9 @@ const addMenu = (menu) => {
             let item = document.createElement('p');
             item.className = "dropdownItem";
             item.innerText = season;
+            item.addEventListener('click', () => {
+                chooseSeason(item);
+            });
             seasonsDropdown.appendChild(item);
         });
         seasonsClicked = true;
@@ -42,14 +44,29 @@ const addMenu = (menu) => {
             let item = document.createElement('p');
             item.className = "dropdownItem";
             item.innerText = habitat;
+            item.addEventListener('click', () => {
+                chooseHabitats(item);
+            })
             habitatDropdown.appendChild(item);
         });
         habitatsClicked = true;
     }
 };
 
+const chooseSeason = (item) => {
+    chosenSeason = item.innerText;
+    console.log(chosenSeason);
+    removeMenu("seasons");
+}
+
+const chooseHabitats = (item) => {
+    chosenHabitats.add(item.innerText);
+    console.log(chosenHabitats);
+}
+
+
 seasonButton.addEventListener('click', () => {
-    if (!seasonsClicked && !habitatsClicked){
+    if (!seasonsClicked && !habitatsClicked) {
         addMenu("seasons");
     } else if (!seasonsClicked && habitatsClicked) {
         addMenu("seasons");
