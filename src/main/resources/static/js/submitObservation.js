@@ -1,12 +1,21 @@
-const livingThing = document.getElementById("livingThingInput").value;
-const description = document.getElementById("descriptionInput").value;
+
+
+
+
+// season and habitat are already created in observationDropdowns.js
 
 
 const submitObservation = () => {
+    let livingThing = document.getElementById("livingThingInput");
+    let description = document.getElementById("descriptionInput");
     let place = document.getElementById("locationInput");
 
     let formData = {
-        locationName: place.value
+        livingThing: livingThing.value,
+        locationName: place.value,
+        season: chosenSeason.innerText,
+        description: description.value,
+        habitats: chosenHabitats
     };
 
     console.log(place.value);
@@ -14,11 +23,12 @@ const submitObservation = () => {
     $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/add-location",
+            url: "/add-observation",
             data: JSON.stringify(formData),
             dataType: 'json'
         }
     )
+
 
     window.location = "/all-locations";
 };

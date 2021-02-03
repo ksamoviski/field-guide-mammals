@@ -4,6 +4,8 @@ import com.sun.istack.FinalArrayList;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Collection;
 
 @Entity
 public class Observation {
@@ -22,8 +24,11 @@ public class Observation {
     private Entry entry;
 
     private String season;
-    private String habitat;
+
+    @Transient
+    private Collection<String> habitats;
     private String description;
+    private LocalDate timeOfObservation;
 
 
     public Long getId() {
@@ -42,11 +47,11 @@ public class Observation {
         return season;
     }
 
-    public String getHabitat() {
-        return habitat;
+    public Collection<String> getHabitats() {
+        return habitats;
     }
 
-    public String getNotes() {
+    public String getDescription() {
         return description;
     }
 
@@ -58,12 +63,13 @@ public class Observation {
     }
 
 
-    public Observation(LivingThing livingThing, Location location, String season, String habitat, String description) {
+    public Observation(LivingThing livingThing, Location location, String season, String description, Collection<String> habitats) {
         this.livingThing = livingThing;
         this.location = location;
         this.season = season;
-        this.habitat = habitat;
+        this.habitats = habitats;
         this.description = description;
+        this.timeOfObservation = LocalDate.now();
     }
 
 }
