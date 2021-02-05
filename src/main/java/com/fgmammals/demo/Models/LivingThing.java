@@ -15,6 +15,10 @@ public class LivingThing {
     private String category;
     private String description;
 
+    public LivingThing(String commonName) {
+        this.commonName = commonName;
+    }
+
     public LivingThing(String commonName, String category, String description) {
         this.commonName = commonName;
         this.category = category;

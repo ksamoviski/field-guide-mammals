@@ -12,6 +12,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Component
 public class Populator implements CommandLineRunner {
@@ -37,9 +39,12 @@ public class Populator implements CommandLineRunner {
 
         Location location = new Location("Alumn Creek");
 
-        Observation observation1 = new Observation(bird, location, "Season", "Habitat", "Notes");
-        Observation observation2 = new Observation(tree, location, "Season", "Habitat", "Notes");
-        Observation observation3 = new Observation(mushroom, location, "Season", "Habitat", "Notes");
+        Collection<String> notes = new ArrayList<>();
+        notes.add("notes will be here");
+
+        Observation observation1 = new Observation(bird, location, "Season", "Habitat", notes);
+        Observation observation2 = new Observation(tree, location, "Season", "Habitat", notes);
+        Observation observation3 = new Observation(mushroom, location, "Season", "Habitat", notes);
 
 
         Entry entry1 = new Entry("Title One", observation1);

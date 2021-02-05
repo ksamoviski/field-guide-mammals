@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/observations.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/addEntryView.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Observations Page</title>
+</head>
+<body id="body">
+
+<input type="text" id="livingThingInput" placeholder="Living Thing" >
+
+<input type="text" id="locationInput" placeholder="Location" name="locationName">
+
+<div class="thirdRow">
+    <div class="add-entry-dropdown" id="seasonsButton">Season</div>
+
+    <div class="add-entry-dropdown" id="habitatButton">Habitat</div>
+</div>
+
+<div id="seasonsDropdown"></div>
+
+<div id="habitatDropdown"></div>
+
+<input type="text" id="descriptionInput" placeholder="Description">
+
+
+<section id="button">
+    <div onclick="submitObservation()" class="buttonContent">
+        Submit Observation
+    </div>
+</section>
+
+<script src="/js/submitObservation.js"></script>
+<script src= "/js/observationDropdowns.js"></script>
+</body>
+</html>
