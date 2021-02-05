@@ -29,10 +29,10 @@ public class ObservationController {
     @Resource
     private LivingThingRepository livingThingRepo;
 
-    @RequestMapping("/observations")
+    @RequestMapping("/observation")
     public String displayAllObservationsInDatabase(Model model) {
         model.addAttribute("observationsList", observationRepo.findAll());
-        return "observations";
+        return "addObservation";
     }
 
     @PostMapping("/add-observation")
@@ -61,9 +61,13 @@ public class ObservationController {
 
         Observation observationToAdd = new Observation(livingThing, location, season, description, habitatsForObservation);
         observationRepo.save(observationToAdd);
-
-
     }
+
+    @RequestMapping("/camera-testing-page")
+    public String displayAddPhotoPage() {
+        return "cameraTestPage";
+    }
+
 
 
 }

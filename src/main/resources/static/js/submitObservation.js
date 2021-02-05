@@ -1,8 +1,4 @@
-
-
-
-
-// season and habitat are already created in observationDropdowns.js
+// season and habitat variables are already created next door in observationDropdowns.js
 
 
 const submitObservation = () => {
@@ -32,6 +28,23 @@ const submitObservation = () => {
 
     window.location = "/all-locations";
 };
+
+const constraints = {audio: true, video: {width: 1280, height: 720}};
+
+navigator.mediaDevices.getUserMedia(constraints)
+    .then(function (mediaStream) {
+        let video = document.querySelector('video');
+        video.srcObject = mediaStream;
+        video.onloadedmetadata = function (e) {
+            video.play().then(r => console.log("thanks") );
+        };
+    })
+    .catch(function (err) {
+            console.log(err.name + " this didn't happen for you");
+        }
+    );
+
+
 
 
 
